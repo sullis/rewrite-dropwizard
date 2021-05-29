@@ -1,0 +1,84 @@
+#
+# Copyright 2021 the original author or authors.
+# <p>
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# <p>
+# https://www.apache.org/licenses/LICENSE-2.0
+# <p>
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.openrewrite.java.dropwizard2.Dropwizard2JUnit4to5Migration
+displayName: JUnit Jupiter for Dropwizard 2.x projects
+description: Migrates Dropwizard 2.x projects having JUnit 4.x tests to JUnit Jupiter.
+tags:
+  - testing
+  - junit
+  - dropwizard
+recipeList:
+  - org.openrewrite.java.testing.junit5.JUnit4to5Migration
+  - org.openrewrite.java.dropwizard2.OutputCaptureExtension
+  - org.openrewrite.java.testing.junit5.RunnerToExtension:
+      runners:
+        - io.dropwizard.AppRunner
+      extension: io.dropwizard.AppExtension
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.openrewrite.java.dropwizard2.Dropwizard2BestPractices
+displayName: Dropwizard 2.x best practices
+description: Applies best practices to Dropwizard 2 applications.
+tags:
+  - dropwizard
+recipeList:
+  - org.openrewrite.java.dropwizard2.Foo1
+  - org.openrewrite.java.dropwizard2.Foo2
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.openrewrite.java.dropwizard2.Dropwizard1To2Migration
+displayName: Dropwizard 2.x migration from Dropwizard 1.x
+description: Migrates Dropwizard 1.x to 2.x including best practices.
+tags:
+  - testing
+  - junit
+  - mockito
+  - dropwizard
+recipeList:
+  - org.openrewrite.java.dropwizard2.Dropwizard2JUnit4to5Migration
+  - org.openrewrite.java.testing.junit5.JUnit5BestPractices
+  - org.openrewrite.maven.UpgradeDependencyVersion:
+      groupId: io.dropwizard
+      newVersion: 2.x
+      trustParent: true
+  - org.openrewrite.maven.UpgradeParentVersion:
+      groupId: io.dropwizard
+      artifactId: dropwizard-core
+      newVersion: 2.x
+  - org.openrewrite.maven.UpgradeDependencyVersion:
+      groupId: org.mockito
+      toVersion: 3.x
+      trustParent: true
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: io.dropwizard.Foobar
+      newFullyQualifiedTypeName: io.dropwizard.Foobar2
+  - org.openrewrite.maven.AddDependency:
+      groupId: javax.validation
+      artifactId: validation-api
+      version: 2.x
+      onlyIfUsing:
+        - javax.validation.constraints.NotBlank
+        - javax.validation.constraints.NotEmpty
+  - org.openrewrite.maven.AddDependency:
+      groupId: io.dropwizard
+      artifactId: dropwizard-core
+      version: 2.x
+      onlyIfUsing:
+        - javax.validation.constraints.NotBlank
+        - javax.validation.constraints.NotEmpty
+  - org.openrewrite.java.dropwizard2.Dropwizard2BestPractices

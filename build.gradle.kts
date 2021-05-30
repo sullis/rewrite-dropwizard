@@ -121,11 +121,7 @@ dependencies {
     testRuntimeOnly("org.openrewrite:rewrite-java-8:${rewriteVersion}")
 
     testRuntimeOnly("junit:junit:latest.release")
-    testRuntimeOnly("org.springframework:spring-test:4.+")
-    testRuntimeOnly("org.springframework:spring-beans:4.+")
-    testRuntimeOnly("org.springframework:spring-webmvc:4.+")
-    testRuntimeOnly("org.springframework.boot:spring-boot-autoconfigure:1.5.+")
-    testRuntimeOnly("org.springframework.boot:spring-boot-test:1.5.+")
+    testRuntimeOnly("io.dropwizard:dropwizard-dependencies:2.+")
 }
 
 tasks.named<Test>("test") {

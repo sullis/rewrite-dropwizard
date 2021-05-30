@@ -67,6 +67,11 @@ recipeList:
   - org.openrewrite.java.ChangeType:
       oldFullyQualifiedTypeName: io.dropwizard.Foobar
       newFullyQualifiedTypeName: io.dropwizard.Foobar2
+  - org.openrewrite.yaml.DeleteKey:
+      keyPath: xyz.soLingerTime
+  - org.openrewrite.yaml.ChangeKey:
+      oldKeyPath: xyz.minRequestDataRate
+      newKey: xyz.minRequestDataPerSecond
   - org.openrewrite.maven.AddDependency:
       groupId: javax.validation
       artifactId: validation-api

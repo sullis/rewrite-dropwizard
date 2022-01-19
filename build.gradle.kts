@@ -22,7 +22,7 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
 
     id("com.github.hierynomus.license") version "0.16.1"
-    id("com.github.jk1.dependency-license-report") version "1.16"
+    id("com.github.jk1.dependency-license-report") version "2.0"
 
     id("nebula.maven-publish") version "17.3.2"
     id("nebula.contacts") version "6.0.0"

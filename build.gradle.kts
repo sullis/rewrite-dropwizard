@@ -113,7 +113,7 @@ dependencies {
     testImplementation("com.github.marschall:memoryfilesystem:2.2.0")
 
     // for generating properties migration configurations
-    testImplementation("com.fasterxml.jackson.core:jackson-databind:latest.release")
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.1")
     testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
     testImplementation("io.github.classgraph:classgraph:latest.release")
 

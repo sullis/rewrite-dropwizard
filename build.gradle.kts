@@ -17,7 +17,7 @@ plugins {
     signing
 
     id("org.jetbrains.kotlin.jvm") version "1.6.10"
-    id("nebula.maven-resolved-dependencies") version "17.3.2"
+    id("nebula.maven-resolved-dependencies") version "18.2.0"
     id("nebula.release") version "15.3.1"
     id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
 

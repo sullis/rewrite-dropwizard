@@ -19,7 +19,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.6.10"
     id("nebula.maven-resolved-dependencies") version "18.2.0"
     id("nebula.release") version "15.3.1"
-    id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
+    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 
     id("com.github.hierynomus.license") version "0.16.1"
     id("com.github.jk1.dependency-license-report") version "2.0"

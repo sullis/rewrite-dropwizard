@@ -18,7 +18,7 @@ plugins {
 
     id("org.jetbrains.kotlin.jvm") version "1.6.10"
     id("nebula.maven-resolved-dependencies") version "18.2.0"
-    id("nebula.release") version "15.3.1"
+    id("nebula.release") version "16.0.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 
     id("com.github.hierynomus.license") version "0.16.1"
@@ -109,7 +109,7 @@ dependencies {
 
     testImplementation("org.openrewrite:rewrite-test:${rewriteVersion}")
 
-    testImplementation("org.assertj:assertj-core:latest.release")
+    testImplementation("org.assertj:assertj-core:3.22.0")
     testImplementation("com.github.marschall:memoryfilesystem:2.2.0")
 
     // for generating properties migration configurations

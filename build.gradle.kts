@@ -110,7 +110,7 @@ dependencies {
     testImplementation("org.openrewrite:rewrite-test:${rewriteVersion}")
 
     testImplementation("org.assertj:assertj-core:3.22.0")
-    testImplementation("com.github.marschall:memoryfilesystem:2.2.0")
+    testImplementation("com.github.marschall:memoryfilesystem:2.3.0")
 
     // for generating properties migration configurations
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.1")

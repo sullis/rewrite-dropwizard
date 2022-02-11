@@ -80,7 +80,7 @@ configurations.all {
 }
 
 val rewriteVersion = "7.17.3"
-val testingFrameworksVersion = "1.16.0"
+val testingFrameworksVersion = "1.17.0"
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.22")
     annotationProcessor("org.projectlombok:lombok:latest.release")

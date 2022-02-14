@@ -115,7 +115,7 @@ dependencies {
     // for generating properties migration configurations
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.1")
     testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
-    testImplementation("io.github.classgraph:classgraph:4.8.138")
+    testImplementation("io.github.classgraph:classgraph:4.8.139")
 
     testRuntimeOnly("org.openrewrite:rewrite-java-11:${rewriteVersion}")
     testRuntimeOnly("org.openrewrite:rewrite-java-8:${rewriteVersion}")

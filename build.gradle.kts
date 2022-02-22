@@ -28,7 +28,7 @@ plugins {
     id("nebula.contacts") version "6.0.0"
     id("nebula.info") version "11.2.0"
 
-    id("nebula.javadoc-jar") version "18.2.0"
+    id("nebula.javadoc-jar") version "18.3.0"
     id("nebula.source-jar") version "18.2.0"
     id("nebula.maven-apache-license") version "18.2.0"
 

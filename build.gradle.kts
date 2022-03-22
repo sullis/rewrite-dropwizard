@@ -24,7 +24,7 @@ plugins {
     id("com.github.hierynomus.license") version "0.16.1"
     id("com.github.jk1.dependency-license-report") version "2.1"
 
-    id("nebula.maven-publish") version "18.2.0"
+    id("nebula.maven-publish") version "18.4.0"
     id("nebula.contacts") version "6.0.0"
     id("nebula.info") version "11.3.3"
 

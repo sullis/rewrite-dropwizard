@@ -26,7 +26,7 @@ plugins {
 
     id("nebula.maven-publish") version "18.2.0"
     id("nebula.contacts") version "6.0.0"
-    id("nebula.info") version "11.2.0"
+    id("nebula.info") version "11.3.3"
 
     id("nebula.javadoc-jar") version "18.2.0"
     id("nebula.source-jar") version "18.2.0"
@@ -79,7 +79,7 @@ configurations.all {
     }
 }
 
-val rewriteVersion = "7.18.2"
+val rewriteVersion = "7.19.0"
 val testingFrameworksVersion = "1.17.0"
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.22")

@@ -17,22 +17,22 @@ plugins {
     signing
 
     id("org.jetbrains.kotlin.jvm") version "1.6.10"
-    id("nebula.maven-resolved-dependencies") version "18.2.0"
+    id("nebula.maven-resolved-dependencies") version "18.4.0"
     id("nebula.release") version "16.0.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 
     id("com.github.hierynomus.license") version "0.16.1"
     id("com.github.jk1.dependency-license-report") version "2.1"
 
-    id("nebula.maven-publish") version "18.2.0"
+    id("nebula.maven-publish") version "18.4.0"
     id("nebula.contacts") version "6.0.0"
     id("nebula.info") version "11.3.3"
 
     id("nebula.javadoc-jar") version "18.4.0"
     id("nebula.source-jar") version "18.2.0"
-    id("nebula.maven-apache-license") version "18.2.0"
+    id("nebula.maven-apache-license") version "18.4.0"
 
-    id("org.openrewrite.rewrite") version "5.16.2"
+    id("org.openrewrite.rewrite") version "5.18.0"
 }
 
 apply(plugin = "nebula.publish-verification")
@@ -79,7 +79,7 @@ configurations.all {
     }
 }
 
-val rewriteVersion = "7.18.2"
+val rewriteVersion = "7.19.0"
 val testingFrameworksVersion = "1.17.0"
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.22")

@@ -32,7 +32,7 @@ plugins {
     id("nebula.source-jar") version "18.2.0"
     id("nebula.maven-apache-license") version "18.4.0"
 
-    id("org.openrewrite.rewrite") version "5.19.1"
+    id("org.openrewrite.rewrite") version "5.19.2"
 }
 
 apply(plugin = "nebula.publish-verification")

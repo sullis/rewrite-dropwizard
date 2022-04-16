@@ -115,7 +115,7 @@ dependencies {
     // for generating properties migration configurations
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.2.2")
     testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.2")
-    testImplementation("io.github.classgraph:classgraph:4.8.145")
+    testImplementation("io.github.classgraph:classgraph:4.8.146")
 
     testRuntimeOnly("org.openrewrite:rewrite-java-11:${rewriteVersion}")
     testRuntimeOnly("org.openrewrite:rewrite-java-8:${rewriteVersion}")
@@ -143,7 +143,6 @@ tasks.named<JavaCompile>("compileJava") {
 tasks.withType(KotlinCompile::class.java).configureEach {
     kotlinOptions {
         jvmTarget = "1.8"
-        useIR = true
     }
 
     doFirst {

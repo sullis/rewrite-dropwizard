@@ -33,15 +33,7 @@ jobs:
         with:
           distribution: "temurin"
           java-version: ${{ matrix.java }}
-      - name: setup-cache
-        uses: actions/cache@v3.0.1
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+          cache: 'gradle'
       - name: build
         run: ./gradlew ${GRADLE_SWITCHES} build test
 
@@ -58,15 +50,7 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "11"
-      - name: setup-cache
-        uses: actions/cache@v3.0.1
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+          cache: 'gradle'
       - name: publish-snapshots
         if: github.event_name == 'push'
         timeout-minutes: 30

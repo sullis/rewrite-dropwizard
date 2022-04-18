@@ -25,6 +25,9 @@ class DropwizardReleasesTest {
     fun latestAvailableVersion() {
         val releases = DropwizardReleases()
 
+        assertThat(releases.latestMatchingVersion("1.3.+"))
+            .startsWith("1.3.")
+
         assertThat(releases.latestMatchingVersion("2.+"))
             .startsWith("2.")
 

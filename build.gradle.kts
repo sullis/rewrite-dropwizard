@@ -46,7 +46,7 @@ configure<nebula.plugin.release.git.base.ReleasePluginExtension> {
 }
 
 group = "org.openrewrite.recipe"
-description = "Eliminate legacy Spring patterns and migrate between major Spring Boot versions. Automatically."
+description = "Migrate between major Dropwizard versions. Automatically."
 
 repositories {
     mavenLocal()
@@ -91,7 +91,7 @@ dependencies {
     implementation("org.openrewrite:rewrite-yaml:${rewriteVersion}")
     implementation("org.openrewrite:rewrite-maven:${rewriteVersion}")
 
-    // for locating list of released Spring Boot versions
+    // for locating list of released Dropwizard versions
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
 
     // eliminates "unknown enum constant DeprecationLevel.WARNING" warnings from the build log

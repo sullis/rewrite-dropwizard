@@ -82,8 +82,8 @@ configurations.all {
 val rewriteVersion = "7.21.3"
 val testingFrameworksVersion = "1.20.2"
 dependencies {
-    compileOnly("org.projectlombok:lombok:1.18.22")
-    annotationProcessor("org.projectlombok:lombok:latest.release")
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor("org.projectlombok:lombok:1.18.24")
 
     implementation("org.openrewrite:rewrite-java:${rewriteVersion}")
     implementation("org.openrewrite:rewrite-xml:${rewriteVersion}")

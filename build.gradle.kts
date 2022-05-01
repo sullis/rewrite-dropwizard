@@ -79,7 +79,7 @@ configurations.all {
     }
 }
 
-val rewriteVersion = "7.21.3"
+val rewriteVersion = "7.22.0"
 val testingFrameworksVersion = "1.21.0"
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.24")

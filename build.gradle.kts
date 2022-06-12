@@ -16,7 +16,7 @@ plugins {
     `maven-publish`
     signing
 
-    id("org.jetbrains.kotlin.jvm") version "1.6.21"
+    id("org.jetbrains.kotlin.jvm") version "1.7.0"
     id("nebula.maven-resolved-dependencies") version "18.4.0"
     id("nebula.release") version "16.0.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
@@ -32,7 +32,7 @@ plugins {
     id("nebula.source-jar") version "18.2.0"
     id("nebula.maven-apache-license") version "18.4.0"
 
-    id("org.openrewrite.rewrite") version "5.20.0"
+    id("org.openrewrite.rewrite") version "5.22.1"
 }
 
 apply(plugin = "nebula.publish-verification")

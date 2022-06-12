@@ -32,7 +32,7 @@ plugins {
     id("nebula.source-jar") version "18.2.0"
     id("nebula.maven-apache-license") version "18.4.0"
 
-    id("org.openrewrite.rewrite") version "5.20.0"
+    id("org.openrewrite.rewrite") version "5.22.1"
 }
 
 apply(plugin = "nebula.publish-verification")
@@ -79,7 +79,7 @@ configurations.all {
     }
 }
 
-val rewriteVersion = "7.22.0"
+val rewriteVersion = "7.24.1"
 val testingFrameworksVersion = "1.21.0"
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.24")

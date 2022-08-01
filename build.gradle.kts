@@ -105,7 +105,7 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
 
     testImplementation("org.openrewrite:rewrite-test:${rewriteVersion}")
 
@@ -115,7 +115,7 @@ dependencies {
     // for generating properties migration configurations
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
     testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
-    testImplementation("io.github.classgraph:classgraph:4.8.147")
+    testImplementation("io.github.classgraph:classgraph:4.8.149")
 
     testRuntimeOnly("org.openrewrite:rewrite-java-11:${rewriteVersion}")
     testRuntimeOnly("org.openrewrite:rewrite-java-8:${rewriteVersion}")

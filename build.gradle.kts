@@ -32,7 +32,7 @@ plugins {
     id("nebula.source-jar") version "18.2.0"
     id("nebula.maven-apache-license") version "18.4.0"
 
-    id("org.openrewrite.rewrite") version "5.22.3"
+    id("org.openrewrite.rewrite") version "5.25.0"
 }
 
 apply(plugin = "nebula.publish-verification")
@@ -115,7 +115,7 @@ dependencies {
     // for generating properties migration configurations
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
     testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
-    testImplementation("io.github.classgraph:classgraph:4.8.147")
+    testImplementation("io.github.classgraph:classgraph:4.8.149")
 
     testRuntimeOnly("org.openrewrite:rewrite-java-11:${rewriteVersion}")
     testRuntimeOnly("org.openrewrite:rewrite-java-8:${rewriteVersion}")
